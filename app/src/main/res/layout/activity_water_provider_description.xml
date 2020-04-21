@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WaterProviderDescriptionActivity">
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/waterProviderImage"
+        android:layout_width="352dp"
+        android:layout_height="398dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toTopOf="@+id/waterDropImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:riv_corner_radius="14dip"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="82dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="752dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/waterProviderImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tdsTextView"
+        android:layout_width="211dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/waterProviderImage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="57dp"
+        android:layout_toEndOf="@+id/waterDropImage"
+        android:gravity="center"
+        android:text="tdsValue text edit"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/waterDropImage"
+        app:layout_constraintTop_toBottomOf="@+id/waterProviderImage"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/waterDropImage"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/waterProviderImage"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/purityTextView"
+        app:layout_constraintEnd_toStartOf="@+id/tdsTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waterProviderImage"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/purityTextView"
+        android:layout_width="110dp"
+        android:layout_height="53dp"
+        android:layout_below="@+id/waterDropImage"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="300dp"
+        android:text="textView"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waterDropImage" />
+
+    <Button
+        android:id="@+id/directionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="35dp"
+        android:layout_weight="1.0"
+        android:background="#0000"
+        android:drawableTop="@drawable/direction"
+        android:onClick="directionButtonPressed"
+        android:scaleType="fitXY"
+        android:text="@string/direction"
+        android:textColor="@color/blueMap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/shareButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="35dp"
+        android:layout_weight="1.0"
+        android:background="#0000"
+        android:drawableTop="@drawable/share_button"
+        android:onClick="shareButtonPressed"
+        android:scaleType="fitXY"
+        android:text="@string/share"
+        android:textColor="@color/blueMap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/directionButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
